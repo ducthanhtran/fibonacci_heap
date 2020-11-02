@@ -35,7 +35,7 @@ class FibonacciHeap
             return m_min;
         }
 
-        unsigned int numNodes() const
+        unsigned int num_nodes() const
         {
             return m_numNodes;
         }

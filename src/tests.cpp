@@ -5,7 +5,7 @@
 TEST_CASE("Insert integer keys", "[insert]")
 {
     FibonacciHeap<int32_t> fHeap;
-    REQUIRE(fHeap.numNodes() == 0);
+    REQUIRE(fHeap.num_nodes() == 0);
     REQUIRE(fHeap.min_node() == nullptr);
     const auto result = fHeap.min();
     REQUIRE(!result.has_value());
@@ -18,7 +18,7 @@ TEST_CASE("Insert integer keys", "[insert]")
     const auto result2 = fHeap.min();
     REQUIRE(result2.has_value());
     REQUIRE(result2.value() == 2);
-    REQUIRE(fHeap.numNodes() == 4);
+    REQUIRE(fHeap.num_nodes() == 4);
 
     const auto minNode = fHeap.min_node();
     REQUIRE(minNode != nullptr);
@@ -29,7 +29,7 @@ TEST_CASE("Insert integer keys", "[insert]")
     const auto result3 = fHeap.min();
     REQUIRE(result3.has_value());
     REQUIRE(result3.value() == 1);
-    REQUIRE(fHeap.numNodes() == 5);
+    REQUIRE(fHeap.num_nodes() == 5);
 
     auto minNode2 = fHeap.min_node();
     REQUIRE(minNode2 != nullptr);
